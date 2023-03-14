@@ -1,23 +1,23 @@
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-codirector, % Uncomment to add a codirector to the title page
+%codirector, % Uncomment to add a codirector to the title page
 ]{charter} 
 
 
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Título del proyecto} 
+\titulo{Sistema de monitoreo para planta de acopio de cereales} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
-\posgrado{Carrera de Especialización en Sistemas Embebidos} 
-%\posgrado{Carrera de Especialización en Internet de las Cosas} 
+%\posgrado{Carrera de Especialización en Sistemas Embebidos} 
+\posgrado{Carrera de Especialización en Internet de las Cosas} 
 %\posgrado{Carrera de Especialización en Intelegencia Artificial}
 %\posgrado{Maestría en Sistemas Embebidos} 
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Nombre del Autor} 
+\autor{Lucas Eduardo Olmedo} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Nombre del Director}
@@ -27,8 +27,8 @@ codirector, % Uncomment to add a codirector to the title page
 \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
-\cliente{Nombre del cliente}
-\empresaCliente{Empresa del cliente}
+\cliente{Tribunal Jurado trabajo final CEIoT}
+\empresaCliente{FIUBA}
 
 % Nombre y pertenencia de los jurados, se pueden usar el cualquier lugar del documento con el comando \jurunoname, \jurdosname y \jurtresname y \perteunoname, \pertedosname y \pertetresname.
 \juradoUno{Nombre y Apellido (1)}
@@ -38,9 +38,9 @@ codirector, % Uncomment to add a codirector to the title page
 \juradoTres{Nombre y Apellido (3)}
 \pertenenciaJurTres{pertenencia (3)}
  
-\fechaINICIO{30 de abril de 2021}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{18 de junio de 2021} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2022}	%Fecha de defensa pública del trabajo final
+\fechaINICIO{28 de febrero de 2023}		%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{24 de abril de 2023} 	%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{15 de febrero de 2024}	%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -69,7 +69,7 @@ codirector, % Uncomment to add a codirector to the title page
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-%1      & Se completa hasta el punto 4 inclusive                 & dd/mm/aaaa \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 12 de marzo de 2023 \\ \hline
 %2      & Se completa hasta el punto 7 inclusive
 %		  Se puede agregar algo más \newline
 %		  En distintas líneas \newline
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en \textcolor{red}{la implementación de un prototipo de un sistema de control de temperatura de un calefón}, y tendrá un presupuesto preliminar estimado de \textcolor{red}{600} h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema para monitorear plantas de acopios de cereales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -115,52 +115,35 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
+El presente proyecto es un emprendimiento personal dirigido a solucionar un problema detectado en algunas plantas de acopio de cereales. Una empresa  o cooperativa dedicada al almacenamiento de granos tiene uno o más depósitos distribuidos. Para controlar el estado de almacenamiento de sus productos necesita enviar operarios a las diferentes plantas. Dada esta situación, se plantea implementar un sistema de monitoreo IoT para optimizar tiempos y costos. 
 
-\begin{consigna}{red} % El bloque "consigna" se usa para poner texto en rojo y dar una pequeña ayuda sobre cómo completar la sección. En cada entrega parcial deben eliminar los comandos begin y end del bloque consigna de las secciones que hayan completado.
+Una planta de acopio se encarga de recepcionar diferentes tipos de granos, analizarlos, secarlos y almacenarlos. Para ello, dispone de silos equipados con sistemas de ventilación y control de termométricos, con el objetivo de minimizar las pérdidas de granos tanto en forma cuantitativa como cualitativa durante la etapa de almacenamiento. 
 
-El objetivo es que el lector en una o dos páginas entienda de qué trata el proyecto y cuáles son sus desafíos, cuál es la motivación para realizarlo y su importancia.
+Una empresa que brinde servicio de almacenamiento puede tener varias plantas de acopio distribuidas en diferentes ciudades o zonas rurales. El objetivo del sistema IoT a desarrollar es simplificar la tarea de administración que puede tener una empresa o cooperativa. Se propone instalar nodos y sensores identificando cada silo, monitorizar el estado del cereal almacenado y centralizar esta información en la nube. Con este sistema es posible trazar el estado de almacenamiento del cereal, disminuir las tareas manuales del personal en cada planta y administrar más de una planta desde una sola oficina. 
 
-Se debe introducir el contexto del proyecto, el estado del arte en la temática, describir la propuesta de valor, cúal es el problema que atiende y cuál es la solución que se propone. Se debe dar una descripción funcional de la solución que incluya un diagrama en bloques.
+Si bien en el mercado se encuentran algunas ofertas de sistemas IoT para silos, se plantea diseñar una solución a medida mediante la reutilización de instalaciones existentes y brindando así la posibilidad de reciclar sensores. La propuesta es instalar un nodo por cada silo, este debe obtener datos de sensores para luego transmitirlos hacia la nube. 
 
-Puede ser útil incluir en esta sección la respuesta a alguna de estas preguntas:
-
+La solución propuesta se compone de las siguientes partes: 
 \begin{itemize}
-	\item ¿Cuál es el contexto del proyecto, es un emprendimiento personal, un proyecto para una empresa, es parte del programa de vinculación con empresas del posgrado?
-	\item ¿Existen o aplican condiciones especiales al proyecto, financiamiento de algún programa público o privado, acuerdos de confidencialidad, acuerdos sobre la propiedad intelectual de los entregables u otros?
-	\item ¿Cómo se compara la solución propuesta con el estado del arte en el campo de aplicación? ¿En qué aspectos destaca?
-	\item ¿Ayuda a la explicación si se incluye un lienzo Canvas del Modelo de Negocio?
-	\item ¿En qué estado del ciclo de vida está la solución que se propone?
-	\item ¿Cuáles son las características del cliente (el adoptante de los entregables del proyecto) qué valora, qué necesita?
-	\item ¿Por dónde pasa la innovación?
+	\item Obtención de datos desde sensores. 
+	\item Adaptar y transmitir datos a la nube.
+	\item Procesamiento y persistencia de datos
+	\item Presentación de datos y alarmas. 
 \end{itemize}
 
-La descripción técnica-conceptual \textbf{debe incluir al menos un diagrama en bloques del sistema} y descripción funcional de la solución propuesta.
-
-Las figuras se deben mencionar en el texto ANTES de que aparezcan con una frase como la siguiente: ``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que...''.  La regla es que las figuras nunca pueden ir antes de ser mencionadas en el texto, porque sino el lector no entiende por qué de pronto aparece una figura.
+``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que cada planta de acopio esta compuesta de silos, cada uno de estos posee un nodo con uno o mas sensores. Los nodos transmiten los datos a la nube, los cuales serán almacenados en un servidor de bases de datos y presentados en un dashboard o aplicación en las oficinas de la empresa o cooperativa. ''
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.5\textwidth]{./Figuras/diagBloques.png}
+\includegraphics[width=.8\textwidth]{./Figuras/PlantaAcopio.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El tamaño de la tipografía en TODAS las figuras debe ser adecuado para que NO pase lo que ocurre acá, donde el lector debe esforzarse para poder leer el texto. Los colores usados en el diagrama deben ser adecuados, tal que ayuden a comprender mejor el diagrama, preferentemente en la gama de colores pastel.
-\end{consigna}
-
 \section{2. Identificación y análisis de los interesados}
 \label{sec:interesados}
-
-\begin{consigna}{red} % este comando se debe borrar para la entrega, junto con la contraparte \end{consigna}{red} 
- 
-\textbf{Nota importante:} borrar esto y todas las consignas en color rojo antes de entregar este documento). Esto se hace eliminando el par de comandos que forman el bloque consigna, \verb!\begin{consigna}{red}! y \verb!\end{consigna}{red}! del código. 
- 
-Es inusual que una misma persona esté en más de un rol, incluso en proyectos chicos. Si se considera que una persona cumple dos o más roles, entonces solo dejarla en el rol más importante. 
-
-Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla solo como Cliente. Si una persona es el Responsable, no debe ser colocado también como miembro del equipo.
-
 
 \begin{table}[ht]
 %\caption{Identificación de los interesados}
@@ -168,76 +151,66 @@ Por ejemplo, si una persona es Cliente pero también colabora u orienta, dejarla
 \begin{tabularx}{\linewidth}{@{}|l|X|X|l|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
-Auspiciante   &                   &              	&        	\\ \hline
-Cliente       & \clientename      &\empclientename	&        	\\ \hline
-Impulsor      &                   &              	&        	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores &                   &              	&        	\\ \hline
-Orientador    & \supname	      & \pertesupname 	& Director Trabajo final \\ \hline
-Equipo        & miembro1 \newline 
-				miembro2          &              	&        	\\ \hline
-Opositores    &                   &              	&        	\\ \hline
-Usuario final &                   &              	&        	\\ \hline
+Rol           & Nombre y Apellido    & Organización 	& Puesto 	\\ \hline
+%Auspiciante   &                     &              	&        	\\ \hline
+Cliente       & \clientename         &\empclientename	&--       	\\ \hline
+%Impulsor      &                     &              	&        	\\ \hline
+Responsable   & \authorname          & FIUBA        	& Alumno 	\\ \hline
+%Colaboradores &                     &              	&        	\\ \hline
+Orientador    & \supname	         & \pertesupname 	& Director Trabajo final \\ \hline
+%Equipo        & miembro1 \newline 
+%				miembro2             &              	&        	\\ \hline
+%Opositores    &--                   &Empresas de la competencia   	&--        	\\ \hline
+Usuario final &Empleados Oficina     & Empresa de Acopio   	& Operador / Administrador        	\\ \hline
 \end{tabularx}
 \end{table}
 
-El Director suele ser uno de los Orientadores.
-
-No dejar celdas vacías; si no hay nada que poner en una celda colocar un signo ``-''.
-
-No dejar filas vacías; si no hay nada que poner en una fila entonces eliminarla.
-
-Es deseable listar a continuación las principales características de cada interesado.
- 
-Por ejemplo:
 \begin{itemize}
-	\item Auspiciante: es riguroso y exigente con la rendición de gastos. Tener mucho cuidado con esto.
-	\item Equipo: Juan Perez, suele pedir licencia porque tiene un familiar con una enfermedad. Planificar considerando esto.
-	\item Orientador: María Gómez va a poder ayudar mucho con la definición de los requerimientos.
+	\item Cliente: es el jurado del trabajo final de la especialización de IoT. Todavía a definir. 
 \end{itemize}
-
-\end{consigna} % este comando se debe borrar para la entrega, junto con la contraparte \begin{consigna}{red}
 
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-\begin{consigna}{red}
-¿Por qué se hace el proyecto? ¿Qué se quiere lograr? 
-
-Se recomienda que sea solo un párrafo que empiece diciendo ``El propósito de este proyecto es...''.
-\end{consigna}
+El propósito de este proyecto es implementar un sistema de monitoreo para el almacenamiento de cereales, con el objetivo de conservar en condiciones óptimas los granos almacenados. El sistema deberá diseñarse e implementarse utilizando los conocimientos adquiridos durante el cursado de la CEIoT y con miras a su implementación en campo a futuro. 
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-\begin{consigna}{red}
-¿Qué se incluye y que no se incluye en este proyecto?
+El alcance del proyecto incluye:
 
-Se refiere al trabajo a hacer para entregar el producto o resultado especificado. 
+\begin{itemize}
+ \item Un prototipo funcional. 
+ \item Al menos un nodo instalado en un silo que simule datos obtenidos y transmita los mismos a la nube. 
+ \item Selección del protocolo para transmisión de datos. 
+ \item Desarrollo de backend del sistema que procese y almacene los datos recibidos.
+ \item Presentación de datos en una aplicación.
+\end{itemize}
 
-Explicitar todo lo quede comprendido dentro del alcance del proyecto.
+El presente proyecto no incluye: 
 
-Explicitar además todo lo que no quede incluido (``El presente proyecto no incluye...'')
+\begin{itemize}
+ \item La puesta en marcha del producto en las instalaciones de una planta de almacenamiento.
+ \item La lectura de datos en sensores reales desde los nodos.
+\end{itemize}
 
-\end{consigna}
+
 
 
 \section{5. Supuestos del proyecto}
 \label{sec:supuestos}
 
-\begin{consigna}{red}
-``Para el desarrollo del presente proyecto se supone que: ...''
+Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item Supuesto 1
-	\item Supuesto 2...
+	\item Se implementa un prototipo para el trabajo final de CEIoT, pero el proyecto se continuara. 
+	\item Las plantas de acopio disponen de una conexión a internet. 
+	\item Se dispone de la colaboración de personas idóneas en el almacenamiento de cereales.
 \end{itemize}
 
-Por ejemplo, se podrían incluir supuestos respecto a disponibilidad de tiempo y recursos humanos y materiales, sobre la factibilidad técnica de distintos aspectos del proyecto, sobre otras cuestiones que sean necesarias para el éxito del proyecto como condiciones macroeconómicas o reglamentarias.
-\end{consigna}
+
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
