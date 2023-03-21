@@ -17,7 +17,7 @@
 %\posgrado{Maestría en Internet de las cosas}
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
-\autor{Lucas Eduardo Olmedo} 
+\autor{Ing. Lucas Eduardo Olmedo} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Nombre del Director}
@@ -92,7 +92,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema para monitorear plantas de acopios de cereales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema para monitorear plantas de acopio de cereales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -115,11 +115,11 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-El presente proyecto es un emprendimiento personal dirigido a solucionar un problema detectado en algunas plantas de acopio de cereales. Una empresa  o cooperativa dedicada al almacenamiento de granos tiene uno o más depósitos distribuidos. Para controlar el estado de almacenamiento de sus productos necesita enviar operarios a las diferentes plantas. Dada esta situación, se plantea implementar un sistema de monitoreo IoT para optimizar tiempos y costos. 
+El presente proyecto es un emprendimiento personal dirigido a solucionar un problema detectado en algunas plantas de acopio de cereales. Una empresa  o cooperativa dedicada al almacenamiento de granos tiene uno o más depósitos distribuidos y para controlar el estado de almacenamiento de sus productos necesita enviar operarios a las diferentes plantas. Dada esta situación, se plantea implementar un sistema de monitoreo IoT para optimizar tiempos y costos. 
 
-Una planta de acopio se encarga de recepcionar diferentes tipos de granos, analizarlos, secarlos y almacenarlos. Para ello, dispone de silos equipados con sistemas de ventilación y control de termométricos, con el objetivo de minimizar las pérdidas de granos tanto en forma cuantitativa como cualitativa durante la etapa de almacenamiento. 
+Una planta de acopio se encarga de ` diferentes tipos de granos, analizarlos, secarlos y almacenarlos. Para ello, dispone de silos equipados con sistemas de ventilación y control de termométricos, con el objetivo de minimizar las pérdidas de granos tanto en forma cuantitativa como cualitativa durante la etapa de almacenamiento. 
 
-Una empresa que brinde servicio de almacenamiento puede tener varias plantas de acopio distribuidas en diferentes ciudades o zonas rurales. El objetivo del sistema IoT a desarrollar es simplificar la tarea de administración que puede tener una empresa o cooperativa. Se propone instalar nodos y sensores identificando cada silo, monitorizar el estado del cereal almacenado y centralizar esta información en la nube. Con este sistema es posible trazar el estado de almacenamiento del cereal, disminuir las tareas manuales del personal en cada planta y administrar más de una planta desde una sola oficina. 
+Una empresa que brinde servicio de almacenamiento puede tener varias plantas de acopio distribuidas en diferentes ciudades o zonas rurales. El objetivo del sistema IoT a desarrollar es simplificar la tarea de administración que puede tener una empresa o cooperativa. Se propone instalar nodos y sensores identificando cada silo, monitorizar el estado del cereal almacenado y centralizar esta información en la nube. Con este sistema será posible trazar el estado de almacenamiento del cereal, disminuir las tareas manuales del personal en cada planta y administrar más de una planta desde una sola oficina. 
 
 Si bien en el mercado se encuentran algunas ofertas de sistemas IoT para silos, se plantea diseñar una solución a medida mediante la reutilización de instalaciones existentes y brindando así la posibilidad de reciclar sensores. La propuesta es instalar un nodo por cada silo, este debe obtener datos de sensores para luego transmitirlos hacia la nube. 
 
@@ -127,15 +127,15 @@ La solución propuesta se compone de las siguientes partes:
 \begin{itemize}
 	\item Obtención de datos desde sensores. 
 	\item Adaptar y transmitir datos a la nube.
-	\item Procesamiento y persistencia de datos
+	\item Procesamiento y persistencia de datos.
 	\item Presentación de datos y alarmas. 
 \end{itemize}
 
-``En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que cada planta de acopio esta compuesta de silos, cada uno de estos posee un nodo con uno o mas sensores. Los nodos transmiten los datos a la nube, los cuales serán almacenados en un servidor de bases de datos y presentados en un dashboard o aplicación en las oficinas de la empresa o cooperativa. ''
+En la Figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que cada planta de acopio esta compuesta de silos, cada uno de estos posee un nodo con uno o mas sensores. Los nodos transmiten los datos a la nube, los cuales serán almacenados en un servidor de bases de datos y presentados en un \textit{dashboard} o aplicación en las oficinas de la empresa o cooperativa.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/PlantaAcopio.png}
+\includegraphics[width=.9\textwidth]{./Figuras/PlantaAcopio.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
@@ -185,7 +185,7 @@ El alcance del proyecto incluye:
  \item Un prototipo funcional. 
  \item Al menos un nodo instalado en un silo que simule datos obtenidos y transmita los mismos a la nube. 
  \item Selección del protocolo para transmisión de datos. 
- \item Desarrollo de backend del sistema que procese y almacene los datos recibidos.
+ \item Desarrollo de \textit{backend} del sistema que procese y almacene los datos recibidos.
  \item Presentación de datos en una aplicación.
 \end{itemize}
 
@@ -208,112 +208,150 @@ Para el desarrollo del presente proyecto se supone que:
 	\item Se implementa un prototipo para el trabajo final de CEIoT, pero el proyecto se continuara. 
 	\item Las plantas de acopio disponen de una conexión a internet. 
 	\item Se dispone de la colaboración de personas idóneas en el almacenamiento de cereales.
+	\item Se dispone continuidad de los recursos humanos necesarios durante el desarrollo del proyecto. 
+	\item Se contará con los recursos económicos necesarios para la realización del proyecto. 
+	\item Se cuenta con el \textit{hardware} necesario para implementar al menos un prototipo.
+	\item El cliente acepta que las mediciones de temperatura y cantidad de cereal en un silo sean simuladas. 
 \end{itemize}
-
 
 
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-Los requerimientos deben numerarse y de ser posible estar agruparlos por afinidad, por ejemplo:
-
 \begin{enumerate}
 	\item Requerimientos funcionales
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item El sistema deberá monitorizar silos de diferentes plantas de acopio.
+			\item El sistema deberá obtener temperatura de los silos y transmitirla cada 10 minutos.
+			\item El sistema deberá obtener cantidad en kg de cereal almacenado en un silo y transmitirlo cada 15 minutos.
+			\item El sistema deberá mostrar la capacidad máxima de almacenamiento de cada silo y el tipo de cereal almacenado.
+			\item El sistema deberá transmitir los datos de forma segura desde los nodos sensores a un servidor. 
+			\item El sistema deberá contar con una interfaz grafica donde se presenten los datos obtenidos.
+			\item La interfaz grafica se debe poder acceder por los usuarios de la empresa en diferentes computadoras.
+			\item El sistema deberá generar alertas a los usuarios cuando un silo supere una determinada temperatura. 
+			\item El sistema deberá almacenar el historial de mediciones por cada silo en una base de datos. 
+			\item El sistema deberá mostrar en tiempo real las mediciones de un silo. 
+			\item El sistema deberá mostrar el historial de mediciones de un silo.
+			\item El sistema deberá mostrar todos los silos de una planta indicando si las mediciones de temperatura de un silo están fuera de un rango establecido. 
 		\end{enumerate}
+	\item Requerimientos no funcionales
+		\begin{enumerate}
+			\item El sistema deberá ser escalable, permitiendo agregar mas plantas de acopio dentro de una empresa, mas silos en una planta y mas sensores en un silo.  
+			\item El sistema debe estar protegido contra el acceso no autorizado.
+			\item El sistema debe ser fácil de usar y comprender.
+		\end{enumerate}	
 	\item Requerimientos de documentación
 		\begin{enumerate}
-			\item Requerimiento 1
-			\item Requerimiento 2 (prioridad menor)
+			\item Se debe generar un documento de planificación del proyecto.
+			\item Se debe generar un manual de uso.
+			\item Se debe generar un manual de instalación.
+			\item Se debe generar una Memoria Técnica con la documentación de ingeniería detallada.			
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Story points: Se utilizarán 1, 2, 3, 5, 8 y 13 para la estimación de las historias de usuario, según la
+serie de Fibonacci.
 
-El formato propuesto es: "como [rol] quiero [tal cosa] para [tal otra cosa]."
+\begin{itemize}
+\item Como cliente, quiero visualizar todas las plantas de acopio de la empresa en una sola aplicación para tener el control desde una o varias oficinas. (\textit{Story points}: 3)
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia
-\end{consigna}
+\item Como cliente, quiero ver la temperatura de un silo en tiempo real en una aplicación para controlar el estado de conservación del cereal a distancia. (\textit{Story points}: 5)
+
+\item Como cliente, quiero saber la cantidad de cereal almacenado en un silo para poder decidir si es posible almacenar mas cereal en este.  (\textit{Story points}: 5)
+
+\item Como cliente, quiero tener información de la capacidad restante de almacenamiento de un silo y el tipo de cereal para poder realizar logística sin necesidad de ir a la planta. (\textit{Story points}: 2)
+
+\item Como cliente, quiero visualizar una alarma cuando un silo supere una temperatura determinada, indicando la planta y silo correspondiente para poder tomar acciones preventivas y mantener el cereal en optimo estado. (\textit{Story points}: 2)
+
+\item Como cliente, quiero poder visualizar el historial de mediciones de un silo para controlar el estado del almacenamiento del cereal. (\textit{Story points}: 8)
+
+\item Como cliente, quiero poder acceder a la aplicación desde distintas computadoras para poder monitorizar las plantas de acpopio desde diferentes oficinas. (\textit{Story points}: 3)
+
+\item Como gerente de la empresa, quiero que el sistema pida usuario y contraseña al ingresar para que solo puedan acceder personas autorizadas. (\textit{Story points}: 13)
+\end{itemize}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-
-Los entregables del proyecto son (ejemplo):
-
 \begin{itemize}
 	\item Manual de uso
-	\item Diagrama de circuitos esquemáticos
-	\item Código fuente del firmware
-	\item Diagrama de instalación
+	\item Manual de instalación
+	\item Prototipo funcional
+	\item Diagrama esquemático de la solución
 	\item Informe final
-	\item etc...
+	\item Presentación
 \end{itemize}
-
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 \begin{enumerate}
-\item Grupo de tareas 1
+\item Planificación y definición del proyecto (55 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas hs)
-	\item Tarea 3 (tantas h)
+	\item Investigación preliminar (25 hs)
+	\item Relevar requerimientos(15 hs)
+	\item Documentar planificación del proyecto (15 hs)
 	\end{enumerate}
-\item Grupo de tareas 2
+\item Protocolo de comunicación (24)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
+	\item Investigación y elección de protocolo de comunicación (24 hs)
 	\end{enumerate}
-\item Grupo de tareas 3
+\item Análisis y Diseño del modelo de datos (44 hs)
 	\begin{enumerate}
-	\item Tarea 1 (tantas h)
-	\item Tarea 2 (tantas h)
-	\item Tarea 3 (tantas h)
-	\item Tarea 4 (tantas h)
-	\item Tarea 5 (tantas h)
+	\item Elección de tecnología (4 hs)
+	\item Diseño del modelo de datos (20 hs)
+	\item Implementación base de datos y carga inicial de datos (20 hs)
+	\end{enumerate}
+\item Diseño e implementación del nodo y mediciones simuladas (76 hs)
+	\begin{enumerate}
+	\item Elección del \textit{hardware} (4 hs)
+	\item Simulación adquisición de temperatura (20 hs)
+	\item Simulación nivel de llenado silo en kg (16 hs)
+	\item Transmisión de datos simulados (20 hs)
+	\item Pruebas de funcionalidad del nodo (16 hs)
+	\end{enumerate}	
+\item Planificación y desarrollo del \textit{backend} (64 hs)
+	\begin{enumerate}
+	\item Especificación de los requerimientos del \textit{backend} (8 hs)
+	\item Desarrollo del \textit{backend} (40 hs)
+	\item Pruebas de funcionalidad del \textit{backend} (16 hs)
+	\end{enumerate}
+\item Planificación y desarrollo del \textit{frontend} (80 hs)
+	\begin{enumerate}
+	\item Especificación de los requerimientos del \textit{frontend} (8 hs)
+	\item Desarrollo del \textit{frontend} (40 hs)
+	\item Desarrollo de la comunicación con la base de datos (16 hs)
+	\item Pruebas de funcionalidad del \textit{frontend} (16 hs) 
+	\end{enumerate}
+\item Diseño e implementación de un sistema de acceso al software (68 hs)
+	\begin{enumerate}
+	\item Especificación de requerimientos de acceso (12 hs)
+	\item Desarrollo del sistema de acceso (32 hs)
+	\item Pruebas del sistema de acceso (24 hs) 
+	\end{enumerate}		
+\item Pruebas finales (63 hs)
+	\begin{enumerate}
+	\item Planificación de las pruebas (12 hs) 
+	\item Generación del ambiente de pruebas (35 hs)
+	\item Ejecución de las pruebas (16 hs)
+	\end{enumerate}
+\item Documentación (60 hs)
+	\begin{enumerate}
+	\item Generación del manual de instalación (28 hs)
+	\item Generación del manual del usuario (32 hs)
+	\end{enumerate}
+\item Actividades de cierre (80 hs)
+	\begin{enumerate}
+	\item Generación de la memoria final (48 hs)
+	\item Generación de video de uso (16 hs)
+	\item Elaboración de la presentación (16 hs) 
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (tantas h)
-
-Se recomienda que no haya ninguna tarea que lleve más de 40 h. 
-
-\end{consigna}
+Cantidad total de horas: (614 hs).
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
