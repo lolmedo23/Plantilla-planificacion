@@ -20,7 +20,7 @@
 \autor{Ing. Lucas Eduardo Olmedo} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
+\director{Marcelo Castello}
 \pertenenciaDirector{pertenencia} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
@@ -117,7 +117,7 @@ Se adjunta a esta acta la planificación inicial.
 
 El presente proyecto es un emprendimiento personal dirigido a solucionar un problema detectado en algunas plantas de acopio de cereales. Una empresa  o cooperativa dedicada al almacenamiento de granos tiene uno o más depósitos distribuidos y para controlar el estado de almacenamiento de sus productos necesita enviar operarios a las diferentes plantas. Dada esta situación, se plantea implementar un sistema de monitoreo IoT para optimizar tiempos y costos. 
 
-Una planta de acopio se encarga de ` diferentes tipos de granos, analizarlos, secarlos y almacenarlos. Para ello, dispone de silos equipados con sistemas de ventilación y control de termométricos, con el objetivo de minimizar las pérdidas de granos tanto en forma cuantitativa como cualitativa durante la etapa de almacenamiento. 
+Una planta de acopio se encarga de recepcionar diferentes diferentes tipos de granos, analizarlos, secarlos y almacenarlos. Para ello, dispone de silos equipados con sistemas de ventilación y control de termométricos, con el objetivo de minimizar las pérdidas de granos tanto en forma cuantitativa como cualitativa durante la etapa de almacenamiento. 
 
 Una empresa que brinde servicio de almacenamiento puede tener varias plantas de acopio distribuidas en diferentes ciudades o zonas rurales. El objetivo del sistema IoT a desarrollar es simplificar la tarea de administración que puede tener una empresa o cooperativa. Se propone instalar nodos y sensores identificando cada silo, monitorizar el estado del cereal almacenado y centralizar esta información en la nube. Con este sistema será posible trazar el estado de almacenamiento del cereal, disminuir las tareas manuales del personal en cada planta y administrar más de una planta desde una sola oficina. 
 
@@ -222,12 +222,12 @@ Para el desarrollo del presente proyecto se supone que:
 	\item Requerimientos funcionales
 		\begin{enumerate}
 			\item El sistema deberá monitorizar silos de diferentes plantas de acopio.
-			\item El sistema deberá obtener temperatura de los silos y transmitirla cada 10 minutos.
-			\item El sistema deberá obtener cantidad en kg de cereal almacenado en un silo y transmitirlo cada 15 minutos.
+			\item El sistema deberá obtener la temperatura de los silos y transmitirla cada 10 minutos.
+			\item El sistema deberá obtener la cantidad en kg de cereal almacenado en un silo y transmitirlo cada 15 minutos.
 			\item El sistema deberá mostrar la capacidad máxima de almacenamiento de cada silo y el tipo de cereal almacenado.
 			\item El sistema deberá transmitir los datos de forma segura desde los nodos sensores a un servidor. 
-			\item El sistema deberá contar con una interfaz grafica donde se presenten los datos obtenidos.
-			\item La interfaz grafica se debe poder acceder por los usuarios de la empresa en diferentes computadoras.
+			\item El sistema deberá contar con una interfaz gráfica donde se presenten los datos obtenidos.
+			\item La interfaz gráfica se debe poder acceder por los usuarios de la empresa en diferentes computadoras.
 			\item El sistema deberá generar alertas a los usuarios cuando un silo supere una determinada temperatura. 
 			\item El sistema deberá almacenar el historial de mediciones por cada silo en una base de datos. 
 			\item El sistema deberá mostrar en tiempo real las mediciones de un silo. 
@@ -238,215 +238,180 @@ Para el desarrollo del presente proyecto se supone que:
 		\begin{enumerate}
 			\item El sistema deberá ser escalable, permitiendo agregar mas plantas de acopio dentro de una empresa, mas silos en una planta y mas sensores en un silo.  
 			\item El sistema debe estar protegido contra el acceso no autorizado.
-			\item El sistema debe ser fácil de usar y comprender.
+			\item El sistema debe tener una interfaz intuitiva y documentación clara para facilitar su uso por parte del usuario.
 		\end{enumerate}	
 	\item Requerimientos de documentación
 		\begin{enumerate}
 			\item Se debe generar un documento de planificación del proyecto.
 			\item Se debe generar un manual de uso.
 			\item Se debe generar un manual de instalación.
-			\item Se debe generar una Memoria Técnica con la documentación de ingeniería detallada.			
+			\item Se debe generar una memoria técnica con la documentación de ingeniería detallada.			
 		\end{enumerate}
 \end{enumerate}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-Story points: Se utilizarán 1, 2, 3, 5, 8 y 13 para la estimación de las historias de usuario, según la
+\textit{Story points}: Se utilizarán 1, 2, 3, 5, 8 y 13 para la estimación de las historias de usuario, según la
 serie de Fibonacci.
+Los \textit{story points} se asignan a una tarea o historia de usuario en función de la complejidad que representa para el equipo de proyecto. La asignación de \textit{story points} se basa en una evaluación en equipo de varios factores como: esfuerzo requerido, dificultad, complejidad e incertidumbre.
 
 \begin{itemize}
-\item Como cliente, quiero visualizar todas las plantas de acopio de la empresa en una sola aplicación para tener el control desde una o varias oficinas. (\textit{Story points}: 3)
+\item Como cliente quiero visualizar todas las plantas de acopio de la empresa en una sola aplicación para tener el control desde una o varias oficinas. (\textit{Story points}: 3)
 
-\item Como cliente, quiero ver la temperatura de un silo en tiempo real en una aplicación para controlar el estado de conservación del cereal a distancia. (\textit{Story points}: 5)
+\item Como cliente quiero ver la temperatura de un silo en tiempo real en una aplicación para controlar el estado de conservación del cereal a distancia. (\textit{Story points}: 5)
 
-\item Como cliente, quiero saber la cantidad de cereal almacenado en un silo para poder decidir si es posible almacenar mas cereal en este.  (\textit{Story points}: 5)
+\item Como cliente quiero saber la cantidad de cereal almacenado en un silo para poder decidir si es posible almacenar mas cereal en este.  (\textit{Story points}: 5)
 
-\item Como cliente, quiero tener información de la capacidad restante de almacenamiento de un silo y el tipo de cereal para poder realizar logística sin necesidad de ir a la planta. (\textit{Story points}: 2)
+\item Como cliente quiero tener información de la capacidad restante de almacenamiento de un silo y el tipo de cereal para poder realizar logística sin necesidad de ir a la planta. (\textit{Story points}: 2)
 
-\item Como cliente, quiero visualizar una alarma cuando un silo supere una temperatura determinada, indicando la planta y silo correspondiente para poder tomar acciones preventivas y mantener el cereal en optimo estado. (\textit{Story points}: 2)
+\item Como cliente quiero visualizar una alarma cuando un silo supere una temperatura determinada, indicando la planta y silo correspondiente para poder tomar acciones preventivas y mantener el cereal en optimo estado. (\textit{Story points}: 2)
 
-\item Como cliente, quiero poder visualizar el historial de mediciones de un silo para controlar el estado del almacenamiento del cereal. (\textit{Story points}: 8)
+\item Como cliente quiero poder visualizar el historial de mediciones de un silo para controlar el estado del almacenamiento del cereal. (\textit{Story points}: 8)
 
-\item Como cliente, quiero poder acceder a la aplicación desde distintas computadoras para poder monitorizar las plantas de acpopio desde diferentes oficinas. (\textit{Story points}: 3)
+\item Como cliente quiero poder acceder a la aplicación desde distintas computadoras para poder monitorizar las plantas de acpopio desde diferentes oficinas. (\textit{Story points}: 3)
 
-\item Como gerente de la empresa, quiero que el sistema pida usuario y contraseña al ingresar para que solo puedan acceder personas autorizadas. (\textit{Story points}: 13)
+\item Como gerente de la empresa quiero que el sistema pida usuario y contraseña al ingresar para que solo puedan acceder personas autorizadas. (\textit{Story points}: 13)
 \end{itemize}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
 \begin{itemize}
-	\item Manual de uso
-	\item Manual de instalación
-	\item Prototipo funcional
-	\item Diagrama esquemático de la solución
-	\item Informe final
-	\item Presentación
+	\item Manual de uso.
+	\item Manual de instalación.
+	\item Prototipo funcional.
+	\item Diagrama esquemático de la solución.
+	\item Informe final.
+	\item Presentación.
 \end{itemize}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
 \begin{enumerate}
-\item Planificación y definición del proyecto (55 hs)
+\item Planificación y definición del proyecto (55 h)
 	\begin{enumerate}
-	\item Investigación preliminar (25 hs)
-	\item Relevar requerimientos(15 hs)
-	\item Documentar planificación del proyecto (15 hs)
+	\item Investigación preliminar (25 h)
+	\item Relevar requerimientos(15 h)
+	\item Documentar planificación del proyecto (15 h)
 	\end{enumerate}
-\item Protocolo de comunicación (24)
+\item Protocolo de comunicación (24 h)
 	\begin{enumerate}
-	\item Investigación y elección de protocolo de comunicación (24 hs)
+	\item Investigación y elección de protocolo de comunicación (24 h)
 	\end{enumerate}
-\item Análisis y Diseño del modelo de datos (44 hs)
+\item Análisis y Diseño del modelo de datos (44 h)
 	\begin{enumerate}
-	\item Elección de tecnología (4 hs)
-	\item Diseño del modelo de datos (20 hs)
-	\item Implementación base de datos y carga inicial de datos (20 hs)
+	\item Elección de tecnología (4 h)
+	\item Diseño del modelo de datos (20 h)
+	\item Implementación base de datos y carga inicial de datos (20 h)
 	\end{enumerate}
-\item Diseño e implementación del nodo y mediciones simuladas (76 hs)
+\item Diseño e implementación del nodo y mediciones simuladas (76 h)
 	\begin{enumerate}
-	\item Elección del \textit{hardware} (4 hs)
-	\item Simulación adquisición de temperatura (20 hs)
-	\item Simulación nivel de llenado silo en kg (16 hs)
-	\item Transmisión de datos simulados (20 hs)
-	\item Pruebas de funcionalidad del nodo (16 hs)
+	\item Elección del \textit{hardware} (4 h)
+	\item Simulación adquisición de temperatura (20 h)
+	\item Simulación nivel de llenado silo en kg (16 h)
+	\item Transmisión de datos simulados (20 h)
+	\item Pruebas de funcionalidad del nodo (16 h)
 	\end{enumerate}	
-\item Planificación y desarrollo del \textit{backend} (64 hs)
+\item Planificación y desarrollo del \textit{backend} (64 h)
 	\begin{enumerate}
-	\item Especificación de los requerimientos del \textit{backend} (8 hs)
-	\item Desarrollo del \textit{backend} (40 hs)
-	\item Pruebas de funcionalidad del \textit{backend} (16 hs)
+	\item Especificación de los requerimientos del \textit{backend} (8 h)
+	\item Desarrollo del \textit{backend} (40 h)
+	\item Pruebas de funcionalidad del \textit{backend} (16 h)
 	\end{enumerate}
-\item Planificación y desarrollo del \textit{frontend} (80 hs)
+\item Planificación y desarrollo del \textit{frontend} (80 h)
 	\begin{enumerate}
-	\item Especificación de los requerimientos del \textit{frontend} (8 hs)
-	\item Desarrollo del \textit{frontend} (40 hs)
-	\item Desarrollo de la comunicación con la base de datos (16 hs)
-	\item Pruebas de funcionalidad del \textit{frontend} (16 hs) 
+	\item Especificación de los requerimientos del \textit{frontend} (8 h)
+	\item Desarrollo del \textit{frontend} (40 h)
+	\item Desarrollo de la comunicación con la base de datos (16 h)
+	\item Pruebas de funcionalidad del \textit{frontend} (16 h) 
 	\end{enumerate}
-\item Diseño e implementación de un sistema de acceso al software (68 hs)
+\item Diseño e implementación de un sistema de acceso al software (68 h)
 	\begin{enumerate}
-	\item Especificación de requerimientos de acceso (12 hs)
-	\item Desarrollo del sistema de acceso (32 hs)
-	\item Pruebas del sistema de acceso (24 hs) 
+	\item Especificación de requerimientos de acceso (12 h)
+	\item Desarrollo del sistema de acceso (32 h)
+	\item Pruebas del sistema de acceso (24 h) 
 	\end{enumerate}		
-\item Pruebas finales (63 hs)
+\item Pruebas finales (63 h)
 	\begin{enumerate}
-	\item Planificación de las pruebas (12 hs) 
-	\item Generación del ambiente de pruebas (35 hs)
-	\item Ejecución de las pruebas (16 hs)
+	\item Planificación de las pruebas (12 h) 
+	\item Generación del ambiente de pruebas (35 h)
+	\item Ejecución de las pruebas (16 h)
 	\end{enumerate}
-\item Documentación (60 hs)
+\item Documentación (60 h)
 	\begin{enumerate}
-	\item Generación del manual de instalación (28 hs)
-	\item Generación del manual del usuario (32 hs)
+	\item Generación del manual de instalación (28 h)
+	\item Generación del manual del usuario (32 h)
 	\end{enumerate}
-\item Actividades de cierre (80 hs)
+\item Actividades de cierre (80 h)
 	\begin{enumerate}
-	\item Generación de la memoria final (48 hs)
-	\item Generación de video de uso (16 hs)
-	\item Elaboración de la presentación (16 hs) 
+	\item Generación de la memoria final (48 h)
+	\item Generación de video de uso (16 h)
+	\item Elaboración de la presentación (16 h) 
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (614 hs).
+Cantidad total de horas: (614 h).
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
+La unidad de tiempo del diagrama AoN que se muestra en la Figura \ref{fig:AoN} esta expresada en horas.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=1\textwidth]{./Figuras/DiagramaActivityONNode.png}
 \caption{Diagrama de \textit{Activity on Node}.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
-
+\begin{itemize}
+	\item El camino critico es de 310 h y esta compuesto por la secuencia de tareas 1-3-6-7-8.
+	\item El camino semi critico es de 294 h y esta compuesto por la secuencia de tareas 1-3-5-7-8.
+\end{itemize}
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
 
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
 
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
+En la figura \ref{fig:TareasGant}, se muestra el desglose de tareas del diagrama de gant.
 
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de Gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de Gantt de ejemplo}
-\label{fig:gantt}
-\end{figure}
-
+En las figuras \ref{fig:diagGantt1} y \ref{fig:diagGantt2} se observa el diagrama de gantt. Se considero un recurso trabajando los días martes y jueves 4h por día y los sábados 8h. 
 
 \begin{landscape}
 \begin{figure}[htpb]
 \centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt rotado}
-\label{fig:diagGantt}
+\includegraphics[height=.85\textheight]{./Figuras/TareasGant.png}
+\caption{Diagrama de Gantt parte 1}
+\label{fig:TareasGant}
+\end{figure}
+\end{landscape}
+
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[height=.85\textheight]{./Figuras/DiagramaGant1.png}
+\caption{Diagrama de Gantt parte 1}
+\label{fig:diagGantt1}
 \end{figure}
 
 \end{landscape}
 
-\end{consigna}
+\begin{landscape}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[height=.85\textheight]{./Figuras/DiagramaGant2.png}
+\caption{Diagrama de Gantt parte 2}
+\label{fig:diagGantt2}
+\end{figure}
+
+\end{landscape}
 
 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
-
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
-
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
 
 \begin{table}[htpb]
 \centering
@@ -459,50 +424,48 @@ Descripción &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
   \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+Hardware nodos&
+  \multicolumn{1}{c|}{-} &
+  \multicolumn{1}{c|}{150000} &
+  \multicolumn{1}{c|}{150000} \\ \hline
+Horas ingeniería&
+  \multicolumn{1}{c|}{614} &
+  \multicolumn{1}{c|}{4000} &
+  \multicolumn{1}{c|}{2456000} \\ \hline
+Servicios cloud&
+  \multicolumn{1}{c|}{-} &
+  \multicolumn{1}{c|}{200000} &
+  \multicolumn{1}{c|}{200000} \\ \hline
+  Montaje y pruebas en campo&
+  \multicolumn{1}{c|}{-} &
+  \multicolumn{1}{c|}{100000} &
+  \multicolumn{1}{c|}{100000} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{2906000} \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
+%\rowcolor[HTML]{C0C0C0} 
+%Descripción &
+%  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
+%  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
+%  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
+\multicolumn{3}{|c|}{35\% de los costos directos} &
+ %  -&
+  \multicolumn{1}{c|}{1017100} \\ \hline
 \multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
+  \multicolumn{1}{c|}{1017100} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
    \\ \hline
 \end{tabularx}%
 \end{table}
+
+Consideraciones:
+\begin{itemize}
+	\item Los costos son estimados ya que en esta instancia del proyecto no esta definido el \textit{hardware} a utilizar 
+	\item Los valores están indicados en pesos argentinos, la tasa de cambio actual es de 1 dólar = 213.50 pesos (Banco nación, 27 de marzo de 2023) 
+	\item El costo de la hora de ingeniería se obtiene del costo promedio de la hora para un ingeniero de software con varios años de experiencia. 
+\end{itemize}
 
 
 \section{13. Gestión de riesgos}
