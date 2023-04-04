@@ -21,7 +21,7 @@
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{Marcelo Castello}
-\pertenenciaDirector{pertenencia} 
+\pertenenciaDirector{UTN-FRRO} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{John Doe} % para que aparezca en la portada se debe descomentar la opción codirector en el documentclass
 \pertenenciaCoDirector{FIUBA}
@@ -70,12 +70,9 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 12 de marzo de 2023 \\ \hline
-%2      & Se completa hasta el punto 7 inclusive
-%		  Se puede agregar algo más \newline
-%		  En distintas líneas \newline
-%		  Así                                                    & dd/mm/aaaa \\ \hline
-%3      & Se completa hasta el punto 11 inclusive                & dd/mm/aaaa \\ \hline
-%4      & Se completa el plan	                                 & dd/mm/aaaa \\ \hline
+2      & Se completa hasta el punto 9 inclusive                 & 20 de marzo de 2023 \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & 27 de marzo de 2023 \\ \hline
+4      & Se completa hasta el punto 15 inclusive                & 3 de abril de 2023 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -92,7 +89,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema para monitorear plantas de acopio de cereales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en la implementación de un prototipo de un sistema para monitorear plantas de acopio de cereales, y tendrá un presupuesto preliminar estimado de 600 h de trabajo y \$3923100, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -257,21 +254,21 @@ serie de Fibonacci.
 Los \textit{story points} se asignan a una tarea o historia de usuario en función de la complejidad que representa para el equipo de proyecto. La asignación de \textit{story points} se basa en una evaluación en equipo de varios factores como: esfuerzo requerido, dificultad, complejidad e incertidumbre.
 
 \begin{itemize}
-\item Como cliente quiero visualizar todas las plantas de acopio de la empresa en una sola aplicación para tener el control desde una o varias oficinas. (\textit{Story points}: 3)
+\item Como cliente quiero visualizar todas las plantas de acopio de la empresa en una sola aplicación para tener el control desde una o varias oficinas. (\textit{Story points}: 3.  Esta tarea solo implica hacer una pantalla de visualización y una consulta a la base.)
 
-\item Como cliente quiero ver la temperatura de un silo en tiempo real en una aplicación para controlar el estado de conservación del cereal a distancia. (\textit{Story points}: 5)
+\item Como cliente quiero ver la temperatura de un silo en tiempo real en una aplicación para controlar el estado de conservación del cereal a distancia. (\textit{Story points}: 5. En esta historia se considera que debe implementarse tanto la UI como la simulacion y transmision de la temperatura.)
 
-\item Como cliente quiero saber la cantidad de cereal almacenado en un silo para poder decidir si es posible almacenar mas cereal en este.  (\textit{Story points}: 5)
+\item Como cliente quiero saber la cantidad de cereal almacenado en un silo para poder decidir si es posible almacenar mas cereal en este.  (\textit{Story points}: 5. En esta historia es necesario investigar para poder implementar lo solicitado. )
 
-\item Como cliente quiero tener información de la capacidad restante de almacenamiento de un silo y el tipo de cereal para poder realizar logística sin necesidad de ir a la planta. (\textit{Story points}: 2)
+\item Como cliente quiero tener información de la capacidad restante de almacenamiento de un silo y el tipo de cereal para poder realizar logística sin necesidad de ir a la planta. (\textit{Story points}: 2. Al tener implementada la historia anterior, esta es simple.)
 
-\item Como cliente quiero visualizar una alarma cuando un silo supere una temperatura determinada, indicando la planta y silo correspondiente para poder tomar acciones preventivas y mantener el cereal en optimo estado. (\textit{Story points}: 2)
+\item Como cliente quiero visualizar una alarma cuando un silo supere una temperatura determinada, indicando la planta y silo correspondiente para poder tomar acciones preventivas y mantener el cereal en optimo estado. (\textit{Story points}: 2. Esta historia solo es de UI)
 
-\item Como cliente quiero poder visualizar el historial de mediciones de un silo para controlar el estado del almacenamiento del cereal. (\textit{Story points}: 8)
+\item Como cliente quiero poder visualizar el historial de mediciones de un silo para controlar el estado del almacenamiento del cereal. (\textit{Story points}: 8. Es necesario implementar una base de datos y la UI para visualizar los datos)
 
-\item Como cliente quiero poder acceder a la aplicación desde distintas computadoras para poder monitorizar las plantas de acpopio desde diferentes oficinas. (\textit{Story points}: 3)
+\item Como cliente quiero poder acceder a la aplicación desde distintas computadoras para poder monitorizar las plantas de acopio desde diferentes oficinas. (\textit{Story points}: 3. No se observa gran dificultad.)
 
-\item Como gerente de la empresa quiero que el sistema pida usuario y contraseña al ingresar para que solo puedan acceder personas autorizadas. (\textit{Story points}: 13)
+\item Como gerente de la empresa quiero que el sistema pida usuario y contraseña al ingresar para que solo puedan acceder personas autorizadas. (\textit{Story points}: 13. Esta historia es considerada mas compleja ya que el equipo no cuenta con experiencia en tareas relacionadas.)
 \end{itemize}
 
 \section{8. Entregables principales del proyecto}
@@ -384,7 +381,7 @@ En las figuras \ref{fig:diagGantt1} y \ref{fig:diagGantt2} se observa el diagram
 \begin{figure}[htpb]
 \centering 
 \includegraphics[height=.85\textheight]{./Figuras/TareasGant.png}
-\caption{Diagrama de Gantt parte 1}
+\caption{Tareas Diagrama de Gantt}
 \label{fig:TareasGant}
 \end{figure}
 \end{landscape}
@@ -456,6 +453,7 @@ Servicios cloud&
   \multicolumn{1}{c|}{1017100} \\ \hline
 \rowcolor[HTML]{C0C0C0}
 \multicolumn{3}{|c|}{TOTAL} &
+  \multicolumn{1}{c|}{3923100}
    \\ \hline
 \end{tabularx}%
 \end{table}
@@ -471,29 +469,37 @@ Consideraciones:
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+a) Identificación de los riesgos y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+Riesgo 1: riesgo de que los datos puedan ser robados o alterados por personas no autorizadas.
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 8. Si los datos del proyecto son robados o alterados por personas no autorizadas, el impacto puede ser significativo para la empresa y los usuarios finales.
+	\item Probabilidad de ocurrencia (O): 5. Si se implementan medidas de seguridad adecuadas, la ocurrencia de este riesgo puede reducirse. 
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: De no cumplir con los tiempos estipulados para la entrega. 
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 6. Si no se cumple con el tiempo de entrega puede retrasar la entrega al cliente y peligrar la finalización de la especialización. 
+	\item Ocurrencia (O): 3. Se dispone del tiempo estimado y un tiempo extra para llegar a los objetivos en caso de algún retraso o inconveniente. 
 \end{itemize}
 
-Riesgo 3:
+Riesgo 3: De perder los datos almacenados en la base de datos.
 \begin{itemize}
-	\item Severidad (S): 
-	\item Ocurrencia (O):
+	\item Severidad (S): 7. Puede producir la perdida de datos de clientes y perdida de confianza en el producto.
+	\item Ocurrencia (O): 3. Implementando los conocimientos de diseño adquiridos en la especialización se reducen las probabilidades de ocurrencia. 
 \end{itemize}
 
+Riesgo 4: Los usuarios finales no aceptan el sistema o lo rechazan. 
+\begin{itemize}
+	\item Severidad (S): 9. Si los usuarios finales no aceptan el sistema o no se involucran en su uso, el proyecto puede fallar en su objetivo.
+	\item Ocurrencia (O): 5. La ocurrencia de este riesgo depende de la aceptación y compromiso de los usuarios finales.
+\end{itemize}
+
+Riesgo 5: fallas en la conexión entre el nodo sensor y la aplicación
+\begin{itemize}
+	\item Severidad (S): 8. mal funcionamiento del sistema entregando datos incorrectos o con faltantes de datos. 
+	\item Ocurrencia (O): 3. El sistema se diseña implementando conocimientos de arquitectura obtenidos durante el cursado de la especialidad. Se consulta con pesronas capacitadas. 
+\end{itemize}
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
@@ -503,70 +509,123 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+1      & 8 & 5 & 40  & 8  & 2  & 16   \\ \hline
+2      & 6 & 3 & 18  &    &    &      \\ \hline
+3      & 7 & 3 & 21  &    &    &      \\ \hline
+4      & 9 & 5 & 45  & 9  & 3  & 27   \\ \hline
+5      & 8 & 3 & 24  &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 35
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 1: Implementar métodos de ciberseguridad aprendidos en la especialidad con el asesoramiento de expertos. 
+  - Severidad (S): 8. Si los datos del proyecto son robados o alterados por personas no autorizadas, el impacto puede ser significativo para la empresa y los usuarios finales.
+  - Probabilidad de ocurrencia (O): 2. Se reduce la probabilidad de ocurrencia implementando un diseño que tiene en cuenta la ciberseguridad. 
+
+Riesgo 4: Involucrar a los usuarios finales desde el inicio del proyecto y considerar sus necesidades y comentarios en el diseño y desarrollo del sistema.
   Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-
-\end{consigna}
+  - Severidad (S): 9. Si los usuarios finales no aceptan el sistema o no se involucran en su uso, el proyecto puede fallar en su objetivo.
+  - Probabilidad de ocurrencia (O): 3. Se reduce la probabilidad de ocurrencia al involucrar desde el principio del proyecto a los usuarios finales. 
 
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
 \begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
-
+\item Req \#1: El sistema deberá monitorizar silos de diferentes plantas de acopio.
 \begin{itemize}
-	\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-	\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+	\item Verificación: Verificar el diseño del sistema, asegurando que soporte el monitoreo y visualización de mas de una planta de acopio con sus correspondientes silos. 
+	\item Validación: Una vez finalizada la interfaz de usuario verificar que el sistema muestre las plantas de acopio con los silos que están siendo monitorizados. 
+\end{itemize}
+
+\item Req \#2: El sistema deberá obtener la temperatura de los silos y transmitirla cada 10 minutos.
+\begin{itemize}
+	\item Verificación: Análisis del código de la aplicación
+	\item Validación: se comprobara que un nodo sensor envié un dato de temperatura cada 10 minutos y este valor sea visualizado en la interfaz grafica. 
+\end{itemize}
+
+\item Req \#3: El sistema debera obtener la cantidad en kg de cereal almacenado en un silo y
+transmitirlo cada 15 minutos.
+\begin{itemize}
+	\item Verificación: Análisis del código de la aplicación
+	\item Validación:se comprobara que un nodo sensor envié un dato de cantidad de cereal 15 minutos y este valor sea visualizado en la interfaz grafica. 
+\end{itemize}
+
+\item Req \#4: La interfaz grafica se debe poder acceder por los usuarios de la empresa en diferentes
+computadoras.
+\begin{itemize}
+	\item Verificación: realizar pruebas de acceso a la interfaz gráfica desde diferentes dispositivos y navegadores web para asegurarse de que se cumple el requerimiento.
+	\item Validación: realizar una revisión conjunta con los usuarios para asegurarse de que la interfaz gráfica sea intuitiva, fácil de usar y cumpla con sus expectativas.
+\end{itemize}
+
+\item Req \#5: El sistema deberá transmitir los datos de forma segura desde los nodos sensores a un
+servidor.
+\begin{itemize}
+	\item Verificación: realizar pruebas de comunicación utilizando herramientas de monitoreo de red para asegurarse de que los datos se estén transmitiendo de manera segura.
+	\item Validación: se pueden realizar pruebas de penetración y auditorías de seguridad para evaluar la robustez del sistema de transmisión de datos.
+\end{itemize}
+
+\item Req \#6: El sistema deberá generar alertas a los usuarios cuando un silo supere una determinada temperatura.
+\begin{itemize}
+	\item Verificación: se pueden realizar pruebas de simulación de diferentes temperaturas y verificar que el sistema esté enviando y mostrando las alertas correspondientes. 
+	\item Validación: se pueden realizar pruebas de campo en la instalación del sistema y simular situaciones reales en las que un silo supere una determinada temperatura para asegurarse de que el sistema esté generando alertas de manera efectiva.
+\end{itemize}
+
+\item Req \#7: El sistema deberá almacenar el historial de mediciones por cada silo en una base de
+datos.
+\begin{itemize}
+	\item Verificación: Verificar la estructura de base de datos confirmando que puede almacenar los datos de los silos.
+	\item Validación: Validar que la información almacenada en la base de datos es precisa y actualizada. Validar que el sistema puede acceder a los datos almacenados. 
+\end{itemize}
+
+\item Req \#8: El sistema deberá mostrar el historial de mediciones de un silo.
+\begin{itemize}
+	\item Verificación: Verificar que la base de datos permite almacenar y acceder al histórico de mediciones de un silo.- 
+	\item Validación: Comprobar con el usuario que la interfaces grafica permite mostrar datos almacenados de un silo y que los datos son correctos. 
+\end{itemize}
+
+\item Req \#9: El sistema deberá mostrar todos los silos de una planta indicando si las mediciones
+de temperatura de un silo están fuera de un rango establecido.
+\begin{itemize}
+	\item Verificación: verificar que el sistema permite obtener los datos solicitados para mostrar. 
+	\item Validación: Validar con el usuario la interfaz grafica comprobando que cubre las necesidades del cliente. 
+\end{itemize}
+
+\item Req \#10: El sistema debe estar protegido contra el acceso no autorizado.
+\begin{itemize}
+	\item Verificación: revisar el diseño del sistema y la implementación de medidas de seguridad para garantizar que solo los usuarios autorizados puedan acceder al sistema
+	\item Validación: revisión de las políticas de seguridad de la empresa. Prueba de penetración en el sistema para validar que se han implementado medidas de seguridad efectivas para proteger el sistema contra el acceso no autorizado
 \end{itemize}
 
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.  Las acciones de verificación suelen considerar al entregable como ``caja blanca'', es decir se conoce en profundidad su funcionamiento interno.  En cambio, las acciones de validación suelen considerar al entregable como ``caja negra'', es decir, que no se conocen los detalles de su funcionamiento interno.
 
-\end{consigna}
 
 \section{15. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
 
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
-	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
-	 - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-	  - Indicar esto y quién financiará los gastos correspondientes.
+	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
+	 - Se realizará un análisis del grado de cumplimiento de objetivos y requerimientos.\\
+	 - Se verificara si se ha cumplido con los cronogramas, uso de recursos y presupuesto
+originalmente planteados.\\
+	Encargado: Lucas Olmedo
+	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:\\
+	 - Se incluirá en la memoria un detalle de los problemas encontrados y las soluciones implementadas.\\
+	Encargado: Lucas Olmedo
+	\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:\\
+	  - Se realizara una presentación del proyecto y se agradecerá a todos los involucrados.\\
+	  Encargado: Lucas Olmedo\\
 \end{itemize}
 
-\end{consigna}
+
 
 
 \end{document}
