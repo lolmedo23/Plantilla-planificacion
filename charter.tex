@@ -471,136 +471,141 @@ Consideraciones:
 
 a) Identificación de los riesgos y estimación de sus consecuencias:
  
-Riesgo 1: riesgo de que los datos puedan ser robados o alterados por personas no autorizadas.
+Riesgo 1: los datos puedan ser robados o alterados por personas no autorizadas.
 \begin{itemize}
 	\item Severidad (S): 8. Si los datos del proyecto son robados o alterados por personas no autorizadas, el impacto puede ser significativo para la empresa y los usuarios finales.
 	\item Probabilidad de ocurrencia (O): 5. Si se implementan medidas de seguridad adecuadas, la ocurrencia de este riesgo puede reducirse. 
 \end{itemize}   
 
-Riesgo 2: De no cumplir con los tiempos estipulados para la entrega. 
+Riesgo 2: no cumplir con los tiempos estipulados para la entrega. 
 \begin{itemize}
 	\item Severidad (S): 6. Si no se cumple con el tiempo de entrega puede retrasar la entrega al cliente y peligrar la finalización de la especialización. 
 	\item Ocurrencia (O): 3. Se dispone del tiempo estimado y un tiempo extra para llegar a los objetivos en caso de algún retraso o inconveniente. 
 \end{itemize}
 
-Riesgo 3: De perder los datos almacenados en la base de datos.
+Riesgo 3: perder los datos almacenados en la base de datos.
 \begin{itemize}
 	\item Severidad (S): 7. Puede producir la perdida de datos de clientes y perdida de confianza en el producto.
 	\item Ocurrencia (O): 3. Implementando los conocimientos de diseño adquiridos en la especialización se reducen las probabilidades de ocurrencia. 
 \end{itemize}
 
-Riesgo 4: Los usuarios finales no aceptan el sistema o lo rechazan. 
+Riesgo 4: los usuarios finales no aceptan el sistema o lo rechazan. 
 \begin{itemize}
 	\item Severidad (S): 9. Si los usuarios finales no aceptan el sistema o no se involucran en su uso, el proyecto puede fallar en su objetivo.
 	\item Ocurrencia (O): 5. La ocurrencia de este riesgo depende de la aceptación y compromiso de los usuarios finales.
 \end{itemize}
 
-Riesgo 5: fallas en la conexión entre el nodo sensor y la aplicación
+Riesgo 5: fallas en la conexión entre el nodo sensor y la aplicación.
 \begin{itemize}
-	\item Severidad (S): 8. mal funcionamiento del sistema entregando datos incorrectos o con faltantes de datos. 
-	\item Ocurrencia (O): 3. El sistema se diseña implementando conocimientos de arquitectura obtenidos durante el cursado de la especialidad. Se consulta con pesronas capacitadas. 
+	\item Severidad (S): 8. Mal funcionamiento del sistema entregando datos incorrectos o con faltantes de datos. 
+	\item Ocurrencia (O): 3. El sistema se diseña implementando conocimientos de arquitectura obtenidos durante el cursado de la especialidad. Se consulta con personas capacitadas. 
 \end{itemize}
 
 b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 
 \begin{table}[htpb]
+
+
 \centering
 \begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-1      & 8 & 5 & 40  & 8  & 2  & 16   \\ \hline
-2      & 6 & 3 & 18  &    &    &      \\ \hline
-3      & 7 & 3 & 21  &    &    &      \\ \hline
-4      & 9 & 5 & 45  & 9  & 3  & 27   \\ \hline
-5      & 8 & 3 & 24  &    &    &      \\ \hline
+Los datos puedan ser robados o alterados por personas no autorizadas.      & 8 & 5 & \cellcolor[HTML]{FF0000}40  & 8  & 2  & \cellcolor[HTML]{3EFF3F}16   \\ \hline
+No cumplir con los tiempos estipulados para la entrega.      & 6 & 3 & \cellcolor[HTML]{3EFF3F}18  &    &    &      \\ \hline
+Perder los datos almacenados en la base de datos.      & 7 & 3 & \cellcolor[HTML]{3EFF3F}21  &    &    &      \\ \hline
+Los usuarios finales no aceptan el sistema o lo rechazan.      & 9 & 5 & \cellcolor[HTML]{FF0000}45  & 9  & 3  & \cellcolor[HTML]{3EFF3F}27   \\ \hline
+Fallas en la conexión entre el nodo sensor y la aplicación.      & 8 & 3 & \cellcolor[HTML]{3EFF3F}24  &    &    &      \\ \hline
 \end{tabularx}%
 \end{table}
 
 Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 35
+se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a 35
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: Implementar métodos de ciberseguridad aprendidos en la especialidad con el asesoramiento de expertos. 
-  - Severidad (S): 8. Si los datos del proyecto son robados o alterados por personas no autorizadas, el impacto puede ser significativo para la empresa y los usuarios finales.
-  - Probabilidad de ocurrencia (O): 2. Se reduce la probabilidad de ocurrencia implementando un diseño que tiene en cuenta la ciberseguridad. 
+Riesgo 1: implementar métodos de ciberseguridad aprendidos en la especialidad con el asesoramiento de expertos.\\
+Nueva asignación de S y O, con su respectiva justificación:
+\begin{itemize}
+  \item Severidad (S): 8. Si los datos del proyecto son robados o alterados por personas no autorizadas, el impacto puede ser significativo para la empresa y los usuarios finales.
+  \item Ocurrencia (O): 2. Se reduce la probabilidad de ocurrencia implementando un diseño que tiene en cuenta la ciberseguridad. 
+\end{itemize}
 
-Riesgo 4: Involucrar a los usuarios finales desde el inicio del proyecto y considerar sus necesidades y comentarios en el diseño y desarrollo del sistema.
+Riesgo 4: involucrar a los usuarios finales desde el inicio del proyecto y considerar sus necesidades y comentarios en el diseño y desarrollo del sistema.\\
   Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): 9. Si los usuarios finales no aceptan el sistema o no se involucran en su uso, el proyecto puede fallar en su objetivo.
-  - Probabilidad de ocurrencia (O): 3. Se reduce la probabilidad de ocurrencia al involucrar desde el principio del proyecto a los usuarios finales. 
-
+\begin{itemize}
+  \item Severidad (S): 9. Si los usuarios finales no aceptan el sistema o no se involucran en su uso, el proyecto puede fallar en su objetivo.
+  \item Ocurrencia (O): 3. Se reduce la probabilidad de ocurrencia al involucrar desde el principio del proyecto a los usuarios finales. 
+\end{itemize}
 
 \section{14. Gestión de la calidad}
 \label{sec:calidad}
 
 \begin{itemize} 
-\item Req \#1: El sistema deberá monitorizar silos de diferentes plantas de acopio.
+\item Req \#1: el sistema deberá monitorizar silos de diferentes plantas de acopio.
 \begin{itemize}
-	\item Verificación: Verificar el diseño del sistema, asegurando que soporte el monitoreo y visualización de mas de una planta de acopio con sus correspondientes silos. 
-	\item Validación: Una vez finalizada la interfaz de usuario verificar que el sistema muestre las plantas de acopio con los silos que están siendo monitorizados. 
+	\item Verificación: verificar el diseño del sistema, asegurando que soporte el monitoreo y visualización de más de una planta de acopio con sus correspondientes silos. 
+	\item Validación: una vez finalizada la interfaz de usuario verificar que el sistema muestre las plantas de acopio con los silos que están siendo monitorizados. 
 \end{itemize}
 
-\item Req \#2: El sistema deberá obtener la temperatura de los silos y transmitirla cada 10 minutos.
+\item Req \#2: el sistema deberá obtener la temperatura de los silos y transmitirla cada 10 minutos.
 \begin{itemize}
-	\item Verificación: Análisis del código de la aplicación
-	\item Validación: se comprobara que un nodo sensor envié un dato de temperatura cada 10 minutos y este valor sea visualizado en la interfaz grafica. 
+	\item Verificación: análisis del código de la aplicación.
+	\item Validación: se comprobará que un nodo sensor envíe un dato de temperatura cada 10 minutos y este valor sea visualizado en la interfaz grafica. 
 \end{itemize}
 
-\item Req \#3: El sistema debera obtener la cantidad en kg de cereal almacenado en un silo y
+\item Req \#3: el sistema deberá obtener la cantidad en kg de cereal almacenado en un silo y
 transmitirlo cada 15 minutos.
 \begin{itemize}
-	\item Verificación: Análisis del código de la aplicación
-	\item Validación:se comprobara que un nodo sensor envié un dato de cantidad de cereal 15 minutos y este valor sea visualizado en la interfaz grafica. 
+	\item Verificación: análisis del código de la aplicación.
+	\item Validación: se comprobará que un nodo sensor envíe un dato de cantidad del cereal 15 minutos y este valor sea visualizado en la interfaz grafica. 
 \end{itemize}
 
-\item Req \#4: La interfaz grafica se debe poder acceder por los usuarios de la empresa en diferentes
-computadoras.
+\item Req \#4: la interfaz gráfica se debe poder acceder por los usuarios de la empresa en diferentes computadoras.
 \begin{itemize}
 	\item Verificación: realizar pruebas de acceso a la interfaz gráfica desde diferentes dispositivos y navegadores web para asegurarse de que se cumple el requerimiento.
 	\item Validación: realizar una revisión conjunta con los usuarios para asegurarse de que la interfaz gráfica sea intuitiva, fácil de usar y cumpla con sus expectativas.
 \end{itemize}
 
-\item Req \#5: El sistema deberá transmitir los datos de forma segura desde los nodos sensores a un
+\item Req \#5: el sistema deberá transmitir los datos de forma segura desde los nodos sensores a un
 servidor.
 \begin{itemize}
-	\item Verificación: realizar pruebas de comunicación utilizando herramientas de monitoreo de red para asegurarse de que los datos se estén transmitiendo de manera segura.
+	\item Verificación:  revisar el código y ver que estén implementadas las cuestiones protocolares relativas a una comunicación segura.
 	\item Validación: se pueden realizar pruebas de penetración y auditorías de seguridad para evaluar la robustez del sistema de transmisión de datos.
 \end{itemize}
 
-\item Req \#6: El sistema deberá generar alertas a los usuarios cuando un silo supere una determinada temperatura.
+\item Req \#6: el sistema deberá generar alertas a los usuarios cuando un silo supere una determinada temperatura.
 \begin{itemize}
 	\item Verificación: se pueden realizar pruebas de simulación de diferentes temperaturas y verificar que el sistema esté enviando y mostrando las alertas correspondientes. 
 	\item Validación: se pueden realizar pruebas de campo en la instalación del sistema y simular situaciones reales en las que un silo supere una determinada temperatura para asegurarse de que el sistema esté generando alertas de manera efectiva.
 \end{itemize}
 
-\item Req \#7: El sistema deberá almacenar el historial de mediciones por cada silo en una base de
+\item Req \#7: el sistema deberá almacenar el historial de mediciones por cada silo en una base de
 datos.
 \begin{itemize}
-	\item Verificación: Verificar la estructura de base de datos confirmando que puede almacenar los datos de los silos.
-	\item Validación: Validar que la información almacenada en la base de datos es precisa y actualizada. Validar que el sistema puede acceder a los datos almacenados. 
+	\item Verificación: verificar la estructura de base de datos para confirmar que puede almacenar los datos de los silos.
+	\item Validación: validar que la información almacenada en la base de datos es precisa y actualizada. Validar que el sistema puede acceder a los datos almacenados. 
 \end{itemize}
 
-\item Req \#8: El sistema deberá mostrar el historial de mediciones de un silo.
+\item Req \#8: el sistema deberá mostrar el historial de mediciones de un silo.
 \begin{itemize}
-	\item Verificación: Verificar que la base de datos permite almacenar y acceder al histórico de mediciones de un silo.- 
-	\item Validación: Comprobar con el usuario que la interfaces grafica permite mostrar datos almacenados de un silo y que los datos son correctos. 
+	\item Verificación: verificar que la base de datos permite almacenar y acceder al histórico de mediciones de un silo.
+	\item Validación: comprobar con el usuario que las interfaces gráficas permite mostrar datos almacenados de un silo y que los datos son correctos. 
 \end{itemize}
 
-\item Req \#9: El sistema deberá mostrar todos los silos de una planta indicando si las mediciones
+\item Req \#9: el sistema deberá mostrar todos los silos de una planta indicando si las mediciones
 de temperatura de un silo están fuera de un rango establecido.
 \begin{itemize}
 	\item Verificación: verificar que el sistema permite obtener los datos solicitados para mostrar. 
-	\item Validación: Validar con el usuario la interfaz grafica comprobando que cubre las necesidades del cliente. 
+	\item Validación: validar con el usuario la interfaz gráfica comprobando que cubre las necesidades del cliente. 
 \end{itemize}
 
-\item Req \#10: El sistema debe estar protegido contra el acceso no autorizado.
+\item Req \#10: el sistema debe estar protegido contra el acceso no autorizado.
 \begin{itemize}
-	\item Verificación: revisar el diseño del sistema y la implementación de medidas de seguridad para garantizar que solo los usuarios autorizados puedan acceder al sistema
-	\item Validación: revisión de las políticas de seguridad de la empresa. Prueba de penetración en el sistema para validar que se han implementado medidas de seguridad efectivas para proteger el sistema contra el acceso no autorizado
+	\item Verificación: revisar el diseño del sistema y la implementación de medidas de seguridad para garantizar que solo los usuarios autorizados puedan acceder al sistema.
+	\item Validación: revisión de las políticas de seguridad de la empresa. Prueba de penetración en el sistema para validar que se han implementado medidas de seguridad efectivas para proteger el sistema contra el acceso no autorizado.
 \end{itemize}
 
 \end{itemize}
@@ -612,9 +617,9 @@ de temperatura de un silo están fuera de un rango establecido.
 
 
 \begin{itemize}
-	\item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:\\
+	\item Pautas de trabajo que se seguirán para analizar si se respetó el plan de proyecto original:\\
 	 - Se realizará un análisis del grado de cumplimiento de objetivos y requerimientos.\\
-	 - Se verificara si se ha cumplido con los cronogramas, uso de recursos y presupuesto
+	 - Se verificará si se ha cumplido con los cronogramas, uso de recursos y presupuesto
 originalmente planteados.\\
 	Encargado: Lucas Olmedo
 	\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:\\
